@@ -10,7 +10,9 @@ defmodule Assessment.AssessmentTest do
   end
 
   test "check if any cold trucks exist at a known location" do
-    assert length(MobileTruck.find_nearby_trucks_with_food_item(current_position, "Cold", 0.5)) >=
+    latitude = "37.775774368410254"
+    longitude = "-122.43733160784082"
+    current_position = {latitude, longitude}assert length(MobileTruck.find_nearby_trucks_with_food_item(current_position, "Cold", 0.5)) >=
              0
   end
 end
