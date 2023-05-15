@@ -18,10 +18,15 @@ MobileTrucks.find_nearby_trucks_with_food_item
  
 
 iex(2)> latitude= "37.775774368410254"
+
 iex(3)> longitude = "-122.43733160784082"
+
 iex(4)> current_position = {latitude, longitude}
+
 iex(5)> alias Assessment.Types.MobileTruck
+
 iex(6)> MobileTruck.find_nearby_trucks_with_food_item(current_position, "Cold", 0.5) 
+
 [
   %Assessment.Types.MobileTruck{
     __meta__: Memento.Table,
@@ -36,6 +41,7 @@ iex(6)> MobileTruck.find_nearby_trucks_with_food_item(current_position, "Cold", 
     address: "1477 GROVE ST",
     food_items: "Cold Truck: Breakfast: Sandwiches: Salads: Pre-Packaged Snacks: Beverages"
   },
+
   %Assessment.Types.MobileTruck{
     __meta__: Memento.Table,
     id: 355,
@@ -52,6 +58,7 @@ iex(6)> MobileTruck.find_nearby_trucks_with_food_item(current_position, "Cold", 
 ]
 
 iex(7)> MobileTruck.find_nearby_trucks(current_position, 0.75)
+
 MobileTruck.find_nearby_trucks(current_position, 0.75)
 [
   %Assessment.Types.MobileTruck{
